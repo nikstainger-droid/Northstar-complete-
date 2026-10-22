@@ -7,7 +7,7 @@ A fresh, personal-only Northstar PWA for GitHub Pages. Built with vanilla HTML, 
 - Personal dashboard, quick task capture, tasks with due dates and priority
 - Weekly planner and focus note
 - Daily habit check-ins and a small seven-day history
-- Finance dashboard, manual transactions, CSV bank-statement import, category guesses, duplicate skipping, recurring-payment clues and receipt records with optional resized local images
+- Finance dashboard, manual transactions, PDF bank-statement import, category guesses, duplicate skipping, recurring-payment clues and receipt records with optional resized local images
 - Meal planner, recipe library with full ingredients and step-by-step methods, adjustable recipe serving selector, shopping list, pantry list and cleaning tasks
 - Projects with steps and progress, notebook, JSON export and restore
 - Local browser storage and service-worker shell caching for offline use after first load
@@ -24,11 +24,11 @@ A fresh, personal-only Northstar PWA for GitHub Pages. Built with vanilla HTML, 
 
 ## Privacy and backup
 
-Workspace records are stored in `localStorage` in the browser on the device. They are not synced to another device. The app has no login or application backend. GitHub Pages serves the static files; it does not receive app data through app features. Imported bank CSV contents are parsed in the browser and not uploaded by the app. Receipt images are resized in the browser and stored locally with the workspace; many large images can exceed browser storage limits. Export JSON backups regularly and store them somewhere safe.
+Workspace records are stored in `localStorage` in the browser on the device. They are not synced to another device. The app has no login or application backend. GitHub Pages serves the static files; it does not receive app data through app features. Imported bank statement PDFs are parsed in the browser and not uploaded by the app. Receipt images are resized in the browser and stored locally with the workspace; many large images can exceed browser storage limits. Export JSON backups regularly and store them somewhere safe.
 
 ## Finance import notes
 
-CSV import supports common column names for dates, descriptions/payees and amounts, or separate withdrawals/deposits. It is best-effort, not a certified bank feed. Inspect dates, signs, amounts and categories after import. Transactions are not automatically reconciled with bank balances. Recurring payment suggestions are heuristics based on similar descriptions across months; verify before making decisions.
+PDF statement import is best-effort, not a certified bank feed. Inspect dates, debit/credit direction, amounts and categories after import. Transactions are not automatically reconciled with bank balances. Recurring payment suggestions are heuristics based on similar descriptions across months; verify before making decisions.
 
 ## Known limitations
 
@@ -40,4 +40,4 @@ CSV import supports common column names for dates, descriptions/payees and amoun
 
 ## Bank statement PDF import
 
-The Money screen accepts PDF bank statements as well as CSV files. PDF text is extracted in the browser with PDF.js; the statement itself is not uploaded to a Northstar server. The PDF.js library and worker are loaded from cdnjs, so the first PDF import requires an internet connection. Scanned/image-only or password-protected PDFs may not work because OCR is not included. Bank statement layouts vary: check dates, descriptions, amounts, and whether each transaction is income or spending before relying on the imported totals. CSV import remains available for the most reliable structured import.
+The Money screen accepts PDF bank statements only; the CSV import option has been removed. PDF text is extracted in the browser with PDF.js; the statement itself is not uploaded to a Northstar server. The PDF.js library and worker are loaded from cdnjs, so the first PDF import requires an internet connection. Scanned/image-only or password-protected PDFs may not work because OCR is not included. Bank statement layouts vary: check dates, descriptions, amounts, and whether each transaction is income or spending before relying on the imported totals. CSV files are not accepted by this reader.
