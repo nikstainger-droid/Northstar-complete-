@@ -36,3 +36,8 @@ CSV import supports common column names for dates, descriptions/payees and amoun
 - Recipe serving selection currently shows a multiplier rather than recalculating every ingredient quantity. Treat amounts as a guide and adjust sensibly.
 - Offline behavior depends on browser support and successful initial caching. A static GitHub Pages deployment cannot guarantee all browser storage survives device cleanup.
 - This app has not been tested on every device/browser. Run the checks in `RELEASE_CHECKLIST.md` before using it as your main workspace.
+
+
+## Bank statement PDF import
+
+The Money screen accepts PDF bank statements as well as CSV files. PDF text is extracted in the browser with PDF.js; the statement itself is not uploaded to a Northstar server. The PDF.js library and worker are loaded from cdnjs, so the first PDF import requires an internet connection. Scanned/image-only or password-protected PDFs may not work because OCR is not included. Bank statement layouts vary: check dates, descriptions, amounts, and whether each transaction is income or spending before relying on the imported totals. CSV import remains available for the most reliable structured import.
