@@ -31,3 +31,7 @@ Data is stored in the browser on the current device. Export a JSON backup regula
 - The library contains 100 non-baking meal recipes plus 22 baking recipes (122 total).
 - The recipe browser filters by meal, baking, or all recipes and displays the actual count.
 - Shopping-list suggestions exclude plain water and other non-purchase cooking liquids.
+
+
+### Recipe library display
+The recipe library shows the first 10 matching recipes initially, with **Show 10 more** and **Show all** controls. The status line reports how many recipes are shown versus how many match the current filter/search. Searching or changing All / Meals / Baking resets the list to the first batch. The service-worker cache name was bumped so the updated app shell can replace an older cached copy.
