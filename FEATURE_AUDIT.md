@@ -23,3 +23,7 @@ Bank statement import, Supabase, family accounts, invitations, or cloud sharing.
 
 ## Validation
 Static validation should include JavaScript parsing, recipe count checks, and ZIP integrity. Real browser interaction, recipe review, and iPhone deployment still need human acceptance testing.
+
+
+## Recipe library count correction
+The prior archive was short: it had only 64 meal recipes plus 22 baking recipes. This corrected archive adds 36 complete meal recipes, bringing the verified total to 100 meals plus 22 baking recipes.

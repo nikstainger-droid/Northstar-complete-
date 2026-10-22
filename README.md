@@ -3,8 +3,8 @@
 A single-user, local-first personal workspace for GitHub Pages. It has no Supabase dependency, family accounts, invitations, cloud-sharing, or bank-statement importer.
 
 ## Food and home
-- 100 meal options with ingredients, serving sizes, preparation/cooking times, methods, and dietary cautions.
-- Separate baking section with 22 recipes for biscuits, muffins, cakes, scones, slices, pancakes, and savoury baking.
+- 100 complete meal recipes with ingredients, serving sizes, preparation/cooking times, methods, and dietary cautions.
+- Separate baking section with 22 complete recipes for biscuits, muffins, cakes, scones, slices, pancakes, and savoury baking.
 - Search and filter by all recipes, meals, or baking.
 - Link dinner recipes to the meal plan and review the proposed shopping list before adding.
 - Shopping-list generation excludes plain water and combines matching ingredient names and units across planned recipes.
@@ -25,3 +25,9 @@ A single-user, local-first personal workspace for GitHub Pages. It has no Supaba
 
 ## Data and limitations
 Data is stored in the browser on the current device. Export a JSON backup regularly; clearing browser storage can delete app data. Offline support depends on the service-worker cache having been installed while online. This release should be interactively tested on target browsers before being treated as production-ready.
+
+
+## Recipe library verification
+- The library contains 100 non-baking meal recipes plus 22 baking recipes (122 total).
+- The recipe browser filters by meal, baking, or all recipes and displays the actual count.
+- Shopping-list suggestions exclude plain water and other non-purchase cooking liquids.
