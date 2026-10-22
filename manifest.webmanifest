@@ -1,1 +1,16 @@
-{"name":"Northstar — Personal Workspace","short_name":"Northstar","description":"A private, local-first personal workspace.","start_url":"./index.html","scope":"./","display":"standalone","background_color":"#f4f6f2","theme_color":"#f4f6f2","icons":[{"src":"./mark.svg","sizes":"any","type":"image/svg+xml","purpose":"any maskable"}]}
+{
+  "id": "./",
+  "name": "Northstar — Personal Workspace",
+  "short_name": "Northstar",
+  "description": "A private personal workspace for routines, planning, tasks, money, projects, meals and notes.",
+  "start_url": "./index.html",
+  "scope": "./",
+  "display": "standalone",
+  "orientation": "portrait",
+  "background_color": "#f4f6f2",
+  "theme_color": "#f4f6f2",
+  "categories": ["productivity", "lifestyle"],
+  "icons": [
+    {"src":"./mark.svg","sizes":"any","type":"image/svg+xml","purpose":"any maskable"}
+  ]
+}
